@@ -7,15 +7,49 @@
       <app-anime-detail [animeDetail]="selectedBAnime"></app-anime-detail>
       <hr>
     </div>
-    <div class="col-4" *ngFor="let anime of animes">
+
+    <br />
+    <div class="row">
+      <div class="col-4" *ngFor="let anime of animes">
+        <div class="book-card card p-2 mb-2" style="width: 15rem; height: 40rem;">
+          <h5 class="card-title">{{ anime.name }}</h5>
+          <img
+            class="card-img-top"
+            src="{{ anime.img }}"
+            alt="{{ anime.name }}"
+            (click)="onSelected(anime)"
+          />
+          <div class="card-body">
+            <p class="card-text">[{{ anime.Rating }}]</p>
+            <p class="card-text">[{{ anime.studio }}]</p>
+            <p class="card-text">Categories: [{{ anime.categorie }}]</p>
+            <p class="card-text">Total Episodes: [{{ anime.total_episodes }}]</p>
+            <a href="#" (click)="onSelected(anime)">More information</a>
+          </div>
+        </div>
+   </div>
+    </div>
+    <div class="row">
+      <br />
+      <br />
+    </div>
+    <br />
+    <br />
+  </div>
+</div>
+
+ 
+
+
+<!--<div class="col-4" *ngFor="let anime of animes">
         <p>{{anime.name}}</p>
         <img src={{anime.img}}  alt="anime image" width=50px>
         <p>⭐{{anime.Rating}} <b>Categories: </b>{{anime.categorie}}</p>
-        <!-- COMPLETAR PARA INCLUIR LA CANTIDAD DE TEMPORADAS -->
+        !-- COMPLETAR PARA INCLUIR LA CANTIDAD DE TEMPORADAS 
         <p class="card-text"><b># seasons: </b>"COMPLETAR"</p>
         <a href="#" (click)="onSelected(anime)">More information</a>
         <hr>
    </div>
 
-  </div>
-</div>
+  -->
+

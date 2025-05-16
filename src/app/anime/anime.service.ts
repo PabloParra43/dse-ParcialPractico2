@@ -24,6 +24,15 @@ export class AnimeService {
         // pista: use un for tradicional con comparación de un id con un if
 
 
+        /*getBook(id: string): Observable<BookDetail> {
+        return this.http.get<BookDetail>(this.apiUrl + '/' + id);
+        }
+
+        this.bookService.getBooks().subscribe((books) => {
+      this.books = books;
+    });
+
+        */
         //No borre esto, es necesario para manejar el caso en el que no exista un anime con el id dado por parámetro.
         throw new Error(`Anime con ID ${id} no encontrado`);
       })
